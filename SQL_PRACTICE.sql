@@ -36,10 +36,16 @@
 --WHERE FirstName = 'Kevin';
 --WHERE FirstName <> 'Steph';
 
-SELECT * FROM TeamDemographics
---WHERE FirstName LIKE '%n'
---WHERE FirstName LIKE 'k%i%'
---WHERE FirstName is NOT NULL
-WHERE FirstName IN ('Russell', 'Chris')
+--SELECT * FROM TeamDemographics
+----WHERE FirstName LIKE '%n'
+----WHERE FirstName LIKE 'k%i%'
+----WHERE FirstName is NOT NULL
+--WHERE FirstName IN ('Russell', 'Chris')
 
+--Group By and Order By
+--SELECT DISTINCT(JobTitle) 
+--FROM TeamSalary
 
+SELECT Salary, JobTitle ,  COUNT(JobTitle)
+FROM TeamSalary
+GROUP BY Salary, JobTitle
