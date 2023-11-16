@@ -62,5 +62,8 @@
 --GROUP BY JobTitle 
 --ORDER BY JobTitle ASC
 
-SELECT * FROM TeamSalary
-ORDER BY JobTitle DESC, Salary DESC
+--SELECT * FROM TeamSalary
+--ORDER BY JobTitle DESC, Salary DESC
+
+SELECT COUNT(DISTINCT(JobTitle)) 
+FROM TeamSalary
