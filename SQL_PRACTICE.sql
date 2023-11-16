@@ -46,6 +46,21 @@
 --SELECT DISTINCT(JobTitle) 
 --FROM TeamSalary
 
-SELECT Salary, JobTitle ,  COUNT(JobTitle)
-FROM TeamSalary
-GROUP BY Salary, JobTitle
+--SELECT Salary, JobTitle ,  COUNT(JobTitle)
+--FROM TeamSalary
+--GROUP BY Salary, JobTitle
+
+--SELECT Salary , COUNT(Salary)
+--FROM TeamSalary
+--WHERE JobTitle LIKE 'PG'
+--GROUP BY Salary 
+--ORDER BY Salary DESC
+
+
+--SELECT JobTitle , COUNT(Salary) AS CountSalary
+--FROM TeamSalary
+--GROUP BY JobTitle 
+--ORDER BY JobTitle ASC
+
+SELECT * FROM TeamSalary
+ORDER BY JobTitle DESC, Salary DESC
