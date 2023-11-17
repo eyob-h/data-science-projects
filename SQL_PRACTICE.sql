@@ -67,3 +67,19 @@
 
 SELECT COUNT(DISTINCT(JobTitle)) 
 FROM TeamSalary
+
+--NOT AND NULL
+SELECT * FROM TeamDemographics
+WHERE NOT FirstName IS NULL
+
+--INSERT INTO
+--INSERT INTO TeamDemographics(
+--StudentID,
+--FirstName,
+--LastName,
+--Department)
+--VALUES (
+--1008,
+--'Dikembe',
+--'Mutombo',
+--'CSE')
