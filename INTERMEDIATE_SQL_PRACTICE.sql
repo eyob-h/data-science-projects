@@ -24,10 +24,16 @@
 --RIGHT OUTER JOIN "SQL COURSE".dbo.TeamSalary
 --	ON TeamDemographics.StudentID = TeamSalary.StudentID
 
-SELECT TeamSalary.StudentID, FirstName, LastName
+--SELECT TeamSalary.StudentID, FirstName, LastName
+--FROM "SQL COURSE".dbo.TeamDemographics
+--FULL OUTER JOIN "SQL COURSE".dbo.TeamSalary
+--	ON TeamDemographics.StudentID = TeamSalary.StudentID
+
+SELECT *
 FROM "SQL COURSE".dbo.TeamDemographics
 FULL OUTER JOIN "SQL COURSE".dbo.TeamSalary
 	ON TeamDemographics.StudentID = TeamSalary.StudentID
+
 
 
 
