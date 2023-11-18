@@ -10,7 +10,7 @@
 --SELECT * FROM "SQL COURSE".dbo.TeamDemographics
 --INNER JOIN "SQL COURSE".dbo.TeamSalary
 --	ON TeamDemographics.StudentID = TeamSalary.StudentID
--- Only Joins what's common and overlapping
+ --Only Joins what's common and overlapping
 
 --SELECT * FROM "SQL COURSE".dbo.TeamDemographics
 --FULL OUTER JOIN "SQL COURSE".dbo.TeamSalary
@@ -29,11 +29,17 @@
 --FULL OUTER JOIN "SQL COURSE".dbo.TeamSalary
 --	ON TeamDemographics.StudentID = TeamSalary.StudentID
 
-SELECT *
-FROM "SQL COURSE".dbo.TeamDemographics
-FULL OUTER JOIN "SQL COURSE".dbo.TeamSalary
-	ON TeamDemographics.StudentID = TeamSalary.StudentID
+--SELECT *
+--FROM "SQL COURSE".dbo.TeamDemographics
+--FULL OUTER JOIN "SQL COURSE".dbo.TeamSalary
+--	ON TeamDemographics.StudentID = TeamSalary.StudentID
 
+
+SELECT TeamDemographics.StudentID, FirstName, LastName, Salary, JobTitle
+FROM "SQL COURSE".dbo.TeamDemographics
+INNER JOIN "SQL COURSE".dbo.TeamSalary
+	ON TeamDemographics.StudentID = TeamSalary.StudentID
+WHERE JobTitle LIKE '%P%'
 
 
 
