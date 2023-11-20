@@ -37,7 +37,7 @@
 
 SELECT TeamDemographics.StudentID, FirstName, LastName, Salary, JobTitle
 FROM "SQL COURSE".dbo.TeamDemographics
-INNER JOIN "SQL COURSE".dbo.TeamSalary
+FULL OUTER JOIN "SQL COURSE".dbo.TeamSalary
 	ON TeamDemographics.StudentID = TeamSalary.StudentID
 WHERE JobTitle LIKE '%P%'
 
