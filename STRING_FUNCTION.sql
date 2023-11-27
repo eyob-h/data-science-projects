@@ -28,10 +28,10 @@
 
 ----Replace
 
---Select LastName, REPLACE(LastName, '- Fired', '') as LastNameFixed
---FROM EmployeeErrors
+
 --SELECT LastName, REPLACE(LastName, '- Fired', '') as "Fixe Last Name" 
 --FROM TeamErrors
+
 
 ----Change Steph's name
 --SELECT * FROM TeamErrors
@@ -62,3 +62,8 @@
 
 --Select Firstname, UPPER(FirstName)
 --from EmployeeErrors
+
+--SELECT * FROM TeamDemographics
+--SELECT COUNT(FirstName) AS 'CSEs'
+--FROM TeamDemographics 
+--WHERE Department = 'CSE'
