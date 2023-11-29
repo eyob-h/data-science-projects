@@ -44,6 +44,29 @@ VALUES
 
 SELECT * FROM readers
 
+CREATE TABLE Book
+(
+bid VARCHAR (6),
+bname VARCHAR (30),
+bdomain VARCHAR (30),
+CONSTRAINT book_bid_pk PRIMARY KEY(bid)
+);
+
+INSERT INTO Book (bid, bname, bdomain)
+VALUES
+('B001', 'The Enchantress of Addis Ababa', 'Fiction'),
+('B002', 'Simien Mountains', 'Mystery'),
+('B003', 'Land of the Blue Nile', 'Romance'),
+('B004', 'Echoes of Axum', 'Historical Fiction'),
+('B005', 'The Lion King of Ethiopia', 'Literature'),
+('B006', 'The Coffee Chronicles', 'Non-Fiction'),
+('B007', 'The Enigma of Emperor Tewodros', 'Biography'),
+('B008', 'The Whispers of Wollo', 'Folktales'),
+('B009', 'The Legacy of Lalibela', 'Art and Architecture'),
+('B010', 'The Rhythm of Ethiopia', 'Poetry');
+
+
+
 CREATE TABLE active_readers(
 account_id VARCHAR(6),
 reader_id VARCHAR(6),
@@ -52,4 +75,20 @@ atype VARCHAR(10),
 astatus VARCHAR(10),
 CONSTRAINT activereaders_acnumber_pk PRIMARY KEY (account_id),
 CONSTRAINT account_readerid_fk FOREIGN KEY(reader_id) REFERENCES readers(id),
+CONSTRAINT account_bid_fk FOREIGN KEY (bid) REFERENCES Book(bid)
 );
+
+
+INSERT INTO active_readers (account_id, reader_id, bid, atype, astatus)
+VALUES
+('AR001', '05', 'B002', 'Borrowed', 'Active'),
+('AR002', '12', 'B004', 'Reading Room', 'Active'),
+('AR003', '18', 'B001', 'Borrowed', 'Active'),
+('AR004', '07', 'B003', 'Borrowed', 'Active'),
+('AR005', '21', 'B007', 'Reading Room', 'Active'),
+('AR006', '04', 'B009', 'Borrowed', 'Active'),
+('AR007', '15', 'B006', 'Borrowed', 'Active'),
+('AR008', '25', 'B008', 'Reading Room', 'Active'),
+('AR009', '10', 'B005', 'Borrowed', 'Active'),
+('AR010', '17', 'B010', 'Reading Room', 'Active');
+
